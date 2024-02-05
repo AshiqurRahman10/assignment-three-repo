@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment 3</title>
+
+    <!-- tailwind &daisy cdn -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.6.1/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- google inter font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- icon -->
+    <script
+      src="https://kit.fontawesome.com/80287397b1.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- tailwind index -->
+    <style>
+      .font-inter {
+        font-family: "Inter", sans-serif;
+      }
+    </style>
+  </head>
+  <body class="font-inter">
+    <header class="container mx-auto">
+      <!-- navbar -->
+      <nav>
+        <div class="navbar bg-base-100">
+          <div class="navbar-start">
+            <div class="dropdown">
+              <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h8m-8 6h16"
+                  />
+                </svg>
+              </div>
+              <ul
+                tabindex="0"
+                class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+              >
+                <li><a class="text-[#FF4240] font-semibold">Home</a></li>
+                <li><a>About</a></li>
+                <li><a>Pages</a></li>
+                <li><a>Blog</a></li>
+                <li><a>Contact</a></li>
+              </ul>
+            </div>
+            <a class="btn btn-ghost text-xl font-bold"
+              >Hockey<span class="text-[#FF4240]">'</span>s</a
+            >
+          </div>
+          <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal px-1">
+              <li><a class="text-[#FF4240] font-semibold">Home</a></li>
+              <li><a>About</a></li>
+              <li><a>Pages</a></li>
+              <li><a>Blog</a></li>
+              <li><a>Contact</a></li>
+            </ul>
+          </div>
+          <div class="navbar-end space-x-5">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <a class="btn bg-[#FF4240] text-white">Get Ticket</a>
+          </div>
+        </div>
+      </nav>
+
+      <!-- slider -->
+      <section>
+        <div class="carousel w-full">
+          <!-- slide-1 -->
+          <div id="slide1" class="carousel-item relative w-full">
+            <img src="Images/1.png" class="w-full" />
+            <div
+              class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+            >
+              <a href="#slide3" class="btn btn-circle">❮</a>
+              <a href="#slide2" class="btn btn-circle">❯</a>
+            </div>
+          </div>
+          <!-- slide-2 -->
+          <div id="slide2" class="carousel-item relative w-full">
+            <img src="Images/1.png" class="w-full" />
+            <div
+              class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+            >
+              <a href="#slide1" class="btn btn-circle">❮</a>
+              <a href="#slide3" class="btn btn-circle">❯</a>
+            </div>
+          </div>
+          <!-- slide-3 -->
+          <div id="slide3" class="carousel-item relative w-full">
+            <img src="Images/1.png" class="w-full" />
+            <div
+              class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+            >
+              <a href="#slide2" class="btn btn-circle">❮</a>
+              <a href="#slide1" class="btn btn-circle">❯</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </header>
+
+    <main class="container mx-auto">
+      <!-- hockey Club -->
+      <section>
+        <div class="text-center my-5 border-t-2 border-b-2 border-dashed py-7">
+          <h3 class="text-lg font-bold">Professional Hockeys Club</h3>
+          <p class="text-sm pt-3">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam
+            doloremque debitis amet quidem ab quaerat?
+          </p>
+        </div>
+        <div class="gap-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+          <div class="text-center">
+            <div
+              class="radial-progress text-[#FF4240]"
+              style="--value: 87"
+              role="progressbar"
+            >
+              87%
+            </div>
+            <h4 class="text-sm font-semibold py-3">Player Facility</h4>
+            <p class="text-xs">Lorem ipsum dolor sit amet.</p>
+          </div>
+          <div class="text-center">
+            <div
+              class="radial-progress text-[#49D293]"
+              style="--value: 95"
+              role="progressbar"
+            >
+              95%
+            </div>
+            <h4 class="text-sm font-semibold py-3">Experienced Coach</h4>
+            <p class="text-xs">Lorem ipsum dolor sit amet.</p>
+          </div>
+          <div class="text-center">
+            <div
+              class="radial-progress text-[#FFB546]"
+              style="--value: 90"
+              role="progressbar"
+            >
+              90%
+            </div>
+            <h4 class="text-sm font-semibold py-3">Senior Player</h4>
+            <p class="text-xs">Lorem ipsum dolor sit amet.</p>
+          </div>
+          <div class="text-center">
+            <div
+              class="radial-progress text-[#4C8DF1]"
+              style="--value: 80"
+              role="progressbar"
+            >
+              80%
+            </div>
+            <h4 class="text-sm font-semibold py-3">Training Ground</h4>
+            <p class="text-xs">Lorem ipsum dolor sit amet.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- program section -->
+      <section class="">
+        <!-- title section  -->
+        <div class="text-center my-5 border-t-2 border-b-2 border-dashed py-7">
+          <h3 class="text-lg font-bold">Program Sections</h3>
+          <p class="text-sm pt-3">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam
+            doloremque debitis amet quidem ab quaerat?
+          </p>
+        </div>
+        <!-- card section  -->
+        <div class="grid gap-10">
+          <div class="grid gap-10 grid-cols-2 grid-rows-1">
+            <div class="card bg-base-100 image-full">
+              <figure><img class="w-full" src="Images/2.png" alt="Shoes" /></figure>
+              <div class="card-body pt-16 pr-8">
+                <h2 class="card-title text-lg">Junior Program</h2>
+                <p class="text-xs">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Magni earum corrupti reiciendis vel exercitationem natus
+                  pariatur vero, sapiente est unde,
+                </p>
+                <div class="card-actions justify-start">
+                  <button class="btn bg-[#FF4240] border-0 text-white">
+                    Registered Now!
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="card bg-base-100 image-full">
+              <figure><img class="w-full" src="Images/3.png" alt="Shoes" /></figure>
+              <div class="card-body pt-16 pr-8">
+                <h2 class="card-title text-lg">Junior Program</h2>
+                <p class="text-xs">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Magni earum corrupti reiciendis vel exercitationem natus
+                  pariatur vero, sapiente est unde,
+                </p>
+                <div class="card-actions justify-start">
+                  <button class="btn bg-[#FF4240] border-0 text-white">
+                    Registered Now!
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="grid gap-10 grid-cols-1 grid-rows-1">
+            <div class="card bg-base-100 image-full">
+              <figure><img  class="w-full" src="Images/4.png" alt="Shoes" /></figure>
+              <div class="card-body pt-16 pr-8">
+                <h2 class="card-title text-lg">Junior Program</h2>
+                <p class="text-xs">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Magni earum corrupti reiciendis vel exercitationem natus
+                  pariatur vero, sapiente est unde,
+                </p>
+                <div class="card-actions justify-start">
+                  <button class="btn bg-[#FF4240] border-0 text-white">
+                    Registered Now!
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- new product  -->
+      <section>
+        <!-- title  -->
+        <div class="text-center my-5 border-t-2 border-b-2 border-dashed py-7">
+          <h3 class="text-lg font-bold">Our New Products</h3>
+          <p class="text-sm pt-3">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam
+            doloremque debitis amet quidem ab quaerat?
+          </p>
+        </div>
+        <!-- cards  -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 py-5">
+          <div
+            class="card card-side bg-base-100 border-2 border-gray-100 border-solid pl-5"
+          >
+            <figure>
+              <img src="Images/5.png" alt="Movie" />
+            </figure>
+            <div class="card-body py-5">
+              <div class="flex gap-5">
+                <div class="flex gap-1">
+                  <i class="fa-solid fa-star text-[#F99808]"></i>
+                  <p class="text-xs">5.0</p>
+                </div>
+                <div class="flex gap-1">
+                  <i class="fa-regular fa-eye"></i>
+                  <p class="text-xs">20</p>
+                </div>
+                <div class="flex gap-1">
+                  <i class="fa-regular fa-heart"></i>
+                  <p class="text-xs">200</p>
+                </div>
+              </div>
+              <h2 class="card-title">World Cup Flags Football</h2>
+              <p>Click the button to watch on Jetflix app.</p>
+              <div class="flex items-center">
+                <p class="text-[#FF4240] font-semibold text-sm">
+                  Price - $22.00
+                </p>
+                <p class="text-xs">
+                  <i class="fa-solid fa-truck-fast"></i> Delivery Fee : Free
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="card card-side bg-base-100 border-2 border-gray-100 border-solid pl-5"
+          >
+            <figure>
+              <img src="Images/6.png" alt="Movie" />
+            </figure>
+            <div class="card-body py-5">
+              <div class="flex gap-5">
+                <div class="flex gap-1">
+                  <i class="fa-solid fa-star text-[#F99808]"></i>
+                  <p class="text-xs">5.0</p>
+                </div>
+                <div class="flex gap-1">
+                  <i class="fa-regular fa-eye"></i>
+                  <p class="text-xs">20</p>
+                </div>
+                <div class="flex gap-1">
+                  <i class="fa-regular fa-heart"></i>
+                  <p class="text-xs">200</p>
+                </div>
+              </div>
+              <h2 class="card-title">World Cup Flags Football</h2>
+              <p>Click the button to watch on Jetflix app.</p>
+              <div class="flex items-center">
+                <p class="text-[#FF4240] font-semibold text-sm">
+                  Price - $22.00
+                </p>
+                <p class="text-xs">
+                  <i class="fa-solid fa-truck-fast"></i> Delivery Fee : Free
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="card card-side bg-base-100 border-2 border-gray-100 border-solid pl-5"
+          >
+            <figure>
+              <img src="Images/7.png" alt="Movie" />
+            </figure>
+            <div class="card-body py-5">
+              <div class="flex gap-5">
+                <div class="flex gap-1">
+                  <i class="fa-solid fa-star text-[#F99808]"></i>
+                  <p class="text-xs">5.0</p>
+                </div>
+                <div class="flex gap-1">
+                  <i class="fa-regular fa-eye"></i>
+                  <p class="text-xs">20</p>
+                </div>
+                <div class="flex gap-1">
+                  <i class="fa-regular fa-heart"></i>
+                  <p class="text-xs">200</p>
+                </div>
+              </div>
+              <h2 class="card-title">Cap For Hockeys</h2>
+              <p>Click the button to watch on Jetflix app.</p>
+              <div class="flex items-center">
+                <p class="text-[#FF4240] font-semibold text-sm">
+                  Price - $22.00
+                </p>
+                <p class="text-xs">
+                  <i class="fa-solid fa-truck-fast"></i> Delivery Fee : Free
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="card card-side bg-base-100 border-2 border-gray-100 border-solid pl-5"
+          >
+            <figure>
+              <img src="Images/8.png" alt="Movie" />
+            </figure>
+            <div class="card-body py-5">
+              <div class="flex gap-5">
+                <div class="flex gap-1">
+                  <i class="fa-solid fa-star text-[#F99808]"></i>
+                  <p class="text-xs">5.0</p>
+                </div>
+                <div class="flex gap-1">
+                  <i class="fa-regular fa-eye"></i>
+                  <p class="text-xs">20</p>
+                </div>
+                <div class="flex gap-1">
+                  <i class="fa-regular fa-heart"></i>
+                  <p class="text-xs">200</p>
+                </div>
+              </div>
+              <h2 class="card-title">World Cup Flags Football</h2>
+              <p>Click the button to watch on Jetflix app.</p>
+              <div class="flex items-center">
+                <p class="text-[#FF4240] font-semibold text-sm">
+                  Price - $22.00
+                </p>
+                <p class="text-xs">
+                  <i class="fa-solid fa-truck-fast"></i> Delivery Fee : Free
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="card card-side bg-base-100 border-2 border-gray-100 border-solid pl-5"
+          >
+            <figure>
+              <img src="Images/9.png" alt="Movie" />
+            </figure>
+            <div class="card-body py-5">
+              <div class="flex gap-5">
+                <div class="flex gap-1">
+                  <i class="fa-solid fa-star text-[#F99808]"></i>
+                  <p class="text-xs">5.0</p>
+                </div>
+                <div class="flex gap-1">
+                  <i class="fa-regular fa-eye"></i>
+                  <p class="text-xs">20</p>
+                </div>
+                <div class="flex gap-1">
+                  <i class="fa-regular fa-heart"></i>
+                  <p class="text-xs">200</p>
+                </div>
+              </div>
+              <h2 class="card-title">World Cup Flags Football</h2>
+              <p>Click the button to watch on Jetflix app.</p>
+              <div class="flex items-center">
+                <p class="text-[#FF4240] font-semibold text-sm">
+                  Price - $22.00
+                </p>
+                <p class="text-xs">
+                  <i class="fa-solid fa-truck-fast"></i> Delivery Fee : Free
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="card card-side bg-base-100 border-2 border-gray-100 border-solid pl-5"
+          >
+            <figure>
+              <img src="Images/10.png" alt="Movie" />
+            </figure>
+            <div class="card-body py-5">
+              <div class="flex gap-5">
+                <div class="flex gap-1">
+                  <i class="fa-solid fa-star text-[#F99808]"></i>
+                  <p class="text-xs">5.0</p>
+                </div>
+                <div class="flex gap-1">
+                  <i class="fa-regular fa-eye"></i>
+                  <p class="text-xs">20</p>
+                </div>
+                <div class="flex gap-1">
+                  <i class="fa-regular fa-heart"></i>
+                  <p class="text-xs">200</p>
+                </div>
+              </div>
+              <h2 class="card-title">World Cup Flags Football</h2>
+              <p>Click the button to watch on Jetflix app.</p>
+              <div class="flex items-center">
+                <p class="text-[#FF4240] font-semibold text-sm">
+                  Price - $22.00
+                </p>
+                <p class="text-xs">
+                  <i class="fa-solid fa-truck-fast"></i> Delivery Fee : Free
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- clients question -->
+      <section>
+        <!-- title  -->
+        <div class="text-center my-5 border-t-2 border-b-2 border-dashed py-7">
+          <h3 class="text-lg font-bold">Clients Questions</h3>
+          <p class="text-sm pt-3">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam
+            doloremque debitis amet quidem ab quaerat?
+          </p>
+        </div>
+        <!-- accordion -->
+        <div
+          class="flex justify-start flex-col lg:flex-row gap-7 border-2 rounded-lg p-7 mt-10"
+        >
+          <img src="Images/11.png" alt="" />
+          <div class="py-8 w-full">
+            <div class="collapse collapse-plus">
+              <input type="radio" name="my-accordion-3" checked="checked" />
+              <div class="collapse-title text-xl font-medium">
+                Click to open this one and close others
+              </div>
+              <div class="collapse-content">
+                <p>hello</p>
+              </div>
+            </div>
+            <hr />
+            <div class="collapse collapse-plus">
+              <input type="radio" name="my-accordion-3" />
+              <div class="collapse-title text-xl font-medium">
+                Click to open this one and close others
+              </div>
+              <div class="collapse-content">
+                <p>hello</p>
+              </div>
+            </div>
+            <hr />
+            <div class="collapse collapse-plus">
+              <input type="radio" name="my-accordion-3" />
+              <div class="collapse-title text-xl font-medium">
+                Click to open this one and close others
+              </div>
+              <div class="collapse-content">
+                <p>hello</p>
+              </div>
+            </div>
+            <hr />
+            <div class="collapse collapse-plus">
+              <input type="radio" name="my-accordion-3" />
+              <div class="collapse-title text-xl font-medium">
+                Click to open this one and close others
+              </div>
+              <div class="collapse-content">
+                <p>hello</p>
+              </div>
+            </div>
+            <hr />
+            <div class="collapse collapse-plus">
+              <input type="radio" name="my-accordion-3" />
+              <div class="collapse-title text-xl font-medium">
+                Click to open this one and close others
+              </div>
+              <div class="collapse-content">
+                <p>hello</p>
+              </div>
+            </div>
+            <hr />
+            <div class="collapse collapse-plus">
+              <input type="radio" name="my-accordion-3" />
+              <div class="collapse-title text-xl font-medium">
+                Click to open this one and close others
+              </div>
+              <div class="collapse-content">
+                <p>hello</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- get-in-touch  -->
+      <section>
+        <!-- title  -->
+        <div class="text-center my-5 border-t-2 border-b-2 border-dashed py-7">
+          <h3 class="text-lg font-bold">Get In Touch</h3>
+          <p class="text-sm pt-3">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam
+            doloremque debitis amet quidem ab quaerat?
+          </p>
+        </div>
+        <!-- chart  -->
+        <div class="flex flex-col lg:flex-row gap-10 justify-center py-10">
+          <!-- left  -->
+          <div class="space-y-4 p-10 border-2 rounded-lg">
+            <div class="bg-[#F8FDF0] py-5 pl-5 pr-28 rounded-lg">
+              <img class="w-7" src="Images/Group 1171275317.png" alt="" />
+              <p class="text-xs mt-3 mb-1">Phone Number:</p>
+              <h4 class="text-xs font-bold">(+8801876******)</h4>
+            </div>
+            <div class="bg-[#FFFCEF] py-5 pl-5 pr-28 rounded-lg">
+              <img class="w-7" src="Images/Group 1171275318.png" alt="" />
+              <p class="text-xs mt-3 mb-1">Phone Number:</p>
+              <h4 class="text-xs font-bold">(+8801876******)</h4>
+            </div>
+            <div class="bg-[#EFF5FE] py-5 pl-5 pr-28 rounded-lg">
+              <img class="w-7" src="Images/Group 1171275321.png" alt="" />
+              <p class="text-xs mt-3 mb-1">Phone Number:</p>
+              <h4 class="text-xs font-bold">(+8801876******)</h4>
+            </div>
+          </div>
+          <!-- right  -->
+          <div>
+            <form action="/action_page.php">
+              <div class="flex gap-10">
+                <div>
+                  <label class="font-bold" for="fname">First name</label><br />
+                  <input
+                    class="bg-[#F8F8F8] text-[#C4C4C6] text-xs pl-3 py-3 pr-16 mt-1 rounded-md"
+                    type="text"
+                    id="fname"
+                    name="fname"
+                    value="Enter Your Full Name"
+                  />
+                </div>
+                <div>
+                  <label class="font-bold" for="fname">Your Email</label><br />
+                  <input
+                    class="bg-[#F8F8F8] text-[#C4C4C6] text-xs pl-3 py-3 pr-16 mt-1 rounded-md"
+                    type="email"
+                    id="fname"
+                    name="fname"
+                    value="Enter Your Email"
+                  />
+                </div>
+              </div>
+              <div class="flex gap-10 py-7">
+                <div>
+                  <label class="font-bold" for="fname">Subject</label><br />
+                  <input
+                    class="bg-[#F8F8F8] text-[#C4C4C6] text-xs pl-3 py-3 pr-16 mt-1 rounded-md"
+                    type="text"
+                    id="fname"
+                    name="fname"
+                    value="Enter Your Subject"
+                  />
+                </div>
+                <div>
+                  <label class="font-bold" for="fname">Phone Number</label
+                  ><br />
+                  <input
+                    class="bg-[#F8F8F8] text-[#C4C4C6] text-xs pl-3 py-3 pr-16 mt-1 rounded-md"
+                    type="email"
+                    id="fname"
+                    name="fname"
+                    value="Enter Your Phone Number"
+                  />
+                </div>
+              </div>
+              <div>
+                <label class="font-bold" for="fname">Message</label><br />
+                <textarea
+                  class="bg-[#F8F8F8] mt-3 rounded-md"
+                  name=""
+                  id=""
+                  cols="55"
+                  rows="8"
+                ></textarea
+                ><br />
+                <input
+                  class="bg-[#FF4240] text-white mt-5 px-48 py-2 rounded-md font-semibold"
+                  type="submit"
+                  value="Send Message"
+                />
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- social media  -->
+      <section>
+        <div class="text-center space-y-3 bg-[#F8F8F8] rounded-lg py-8 mb-10">
+          <h4 class="text-base font-bold">Social Media</h4>
+          <div class="space-x-3">
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-facebook-f"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-telegram"></i>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer p-10 bg-black text-base-content">
+      <aside>
+        <h3 class="text-white text-2xl font-semibold">Get In Touch</h3>
+        <p class="text-white mt-3">
+          Lorem ipsum dolor sit amet <br />
+          consectetur adipisicing elit. Laborum recusandae ullam, <br />
+          consectetur velit soluta atque .
+        </p>
+        <div class="flex gap-2 mt-3">
+          <span class="text-red-700 text-base"
+            ><i class="fa-regular fa-envelope"></i
+          ></span>
+          <p class="text-white text-sm">hockeys@support.com</p>
+        </div>
+        <div class="flex gap-2">
+          <span class="text-red-700 text-base"
+            ><i class="fa-solid fa-phone-volume"></i
+          ></span>
+          <p class="text-white text-sm">+8801876******</p>
+        </div>
+      </aside>
+      <nav>
+        <h6 class="footer-title text-white">Company</h6>
+        <a class="link link-hover text-white">About Us</a>
+        <a class="link link-hover text-white">Leadership</a>
+        <a class="link link-hover text-white">Careers</a>
+        <a class="link link-hover text-white">News & Article</a>
+        <a class="link link-hover text-white">Legal Notice</a>
+      </nav>
+      <nav>
+        <h6 class="footer-title text-white">Support</h6>
+        <a class="link link-hover text-white">Help Center</a>
+        <a class="link link-hover text-white">FAQ</a>
+        <a class="link link-hover text-white">Ticket Support</a>
+        <a class="link link-hover text-white">Contact Us</a>
+      </nav>
+      <nav>
+        <h6 class="footer-title text-white">Services</h6>
+        <a class="link link-hover text-white">Academy</a>
+        <a class="link link-hover text-white">Group Lesson</a>
+        <a class="link link-hover text-white">Private Lesson</a>
+        <a class="link link-hover text-white">Hockeys for Kids</a>
+        <a class="link link-hover text-white">Hockeys for Adults</a>
+      </nav>
+    </footer>
+  </body>
+</html>
